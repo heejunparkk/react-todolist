@@ -12,10 +12,10 @@ const TodoListBlock = styled.div`
 function TodoList() {
   return (
     <TodoListBlock>
-      <TodoItem text="프로젝트 생성하기" done={true} />
-      <TodoItem text="프로젝트 생성하기" done={true} />
-      <TodoItem text="프로젝트 생성하기" done={true} />
-      <TodoItem text="프로젝트 생성하기" done={true} />
+      <TodoItem text="스벅가기" done={true} />
+      <TodoItem text="코딩테스트 스터디" done={true} />
+      <TodoItem text="인강듣고 공부하기" done={false} />
+      <TodoItem text="유튭보기" done={false} />
     </TodoListBlock>
   );
 }
