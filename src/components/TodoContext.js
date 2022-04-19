@@ -59,14 +59,27 @@ export function TodoProvider({ children }) {
   );
 }
 
+//state, dispatch context를 따로만들어주어서 나중에 최적화하기 유용하게 해준다.
 export function useTodoState() {
-  return useContext(TodoStateContext);
+  const context = useContext(TodoStateContext);
+  if (!context) {
+    throw new Error("Cannot find TodoProvider");
+  }
+  return context;
 }
 
 export function useTodoDispatch() {
-  return useContext(TodoDispatchContext);
+  const context = useContext(TodoDispatchContext);
+  if (!context) {
+    throw new Error("Cannot find TodoProvider");
+  }
+  return context;
 }
 
 export function useTodoNextId() {
-  return useContext(TodoNextIdContext);
+  const context = useContext(TodoNextIdContext);
+  if (!context) {
+    throw new Error("Cannot find TodoProvider");
+  }
+  return context;
 }
